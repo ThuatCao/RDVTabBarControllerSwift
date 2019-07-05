@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
 options: "1621c0a02fd5792a9207377d2d052c93"
-build_time: [1562309983, 492767000]
+build_time: [1562316655, 864836000]
 inputs:
-  "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/RDVTabBar.swift": [1562309971, 968180507]
+  "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/RDVTabBar.swift": [1562316655, 805215647]
   "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/UIDevice+RDVTabBar.swift": [1562309718, 116355399]
   "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/RDVTabBarController.swift": [1562309718, 116063319]
   "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/RDVTabBarItem.swift": [1562309983, 436763094]

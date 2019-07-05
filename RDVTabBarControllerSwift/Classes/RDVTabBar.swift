@@ -107,7 +107,12 @@ open class RDVTabBar: UIView {
     }
 
     open func setHeight(_ height: CGFloat) {
-        self.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: height)
+        
+        var trueHeight = height
+        if isIphoneX() {
+            trueHeight = height + 26
+        }
+        self.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: trueHeight)
     }
 
     override open func layoutSubviews() {
@@ -127,11 +132,15 @@ open class RDVTabBar: UIView {
 
         // Layout items
         var index = CGFloat(0)
+        var spaceX = CGFloat(0);
+        if isIphoneX() {
+            spaceX = CGFloat(26);
+        }
         for item in items {
             let itemHeight = item.itemHeight ?? frameSize.height
             let x = self.contentEdgeInsets.left + (index * self.itemWidth!)
             let y = CGFloat(roundf(Float((frameSize.height - itemHeight) - self.contentEdgeInsets.top)))
-            item.frame = CGRect(x: x, y: y, width: self.itemWidth!, height: itemHeight - self.contentEdgeInsets.bottom)
+            item.frame = CGRect(x: x, y: y, width: self.itemWidth!, height: itemHeight - self.contentEdgeInsets.bottom - spaceX)
             item.setNeedsDisplay()
 
             index += CGFloat(1)
@@ -167,6 +176,13 @@ open class RDVTabBar: UIView {
             index = self.items?.index(of: sender)
             delegate.tabBar(self, didSelectItemAtIndex: index!)
         }
+    }
+    
+    func isIphoneX() -> Bool {
+        if UIDevice.current.userInterfaceIdiom == .phone && max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.width) >= 812.0 {
+            return true
+        }
+        return false
     }
 
 }
