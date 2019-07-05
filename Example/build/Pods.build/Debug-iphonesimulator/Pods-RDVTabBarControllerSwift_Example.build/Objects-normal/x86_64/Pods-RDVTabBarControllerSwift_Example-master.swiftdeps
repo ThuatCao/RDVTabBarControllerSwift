@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "3dac898943011b29a9d41dfe5275c6db"
+build_time: [1562309987, 393342000]
+inputs:
+  "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/RDVTabBarControllerSwift/Classes/UIDevice+RDVTabBar.swift": [1562309718, 116355399]

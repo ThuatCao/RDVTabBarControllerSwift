@@ -154,7 +154,7 @@ open class RDVTabBar: UIView {
     }
 
     // MARK: - Item selection
-    func tabBarItemWasSelected(_ sender: RDVTabBarItem) {
+    @objc func tabBarItemWasSelected(_ sender: RDVTabBarItem) {
         if let delegate = self.delegate {
             var index = self.items?.index(of: sender)
 

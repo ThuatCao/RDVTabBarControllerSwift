@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/Example/build/Debug-iphonesimulator/Pods_RDVTabBarControllerSwift_Example.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/thuatcao/Downloads/RDVTabBarControllerSwift/Example/build/Pods.build/Debug-iphonesimulator/Pods-RDVTabBarControllerSwift_Example.build/unextended-module.modulemap",
+    }]
+  }]
+}

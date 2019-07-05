@@ -27,13 +27,13 @@ open class RDVTabBarItem: UIControl {
     open var title = ""
     open var imagePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
     open var unselectedTitleAttributes = [
-        NSFontAttributeName: UIFont.systemFont(ofSize: 12),
-        NSForegroundColorAttributeName: UIColor.black
+        NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),
+        NSAttributedStringKey.foregroundColor: UIColor.black
     ]
 
     open var selectedTitleAttributes = [
-        NSFontAttributeName: UIFont.systemFont(ofSize: 12),
-        NSForegroundColorAttributeName: UIColor.black
+        NSAttributedStringKey.font: UIFont.systemFont(ofSize: 12),
+        NSAttributedStringKey.foregroundColor: UIColor.black
     ]
 
     open var titlePositionAdjustment = UIOffset.zero
@@ -123,7 +123,7 @@ open class RDVTabBarItem: UIControl {
             var y = imageStartingY + imagePositionAdjustment.vertical
             image?.draw(in: CGRect(x: x, y: y, width: imageSize.width, height: imageSize.height))
 
-            let fillColor = titleAttributes[NSForegroundColorAttributeName] as! UIColor
+            let fillColor = titleAttributes[NSAttributedStringKey.foregroundColor] as! UIColor
             context?.setFillColor(fillColor.cgColor)
 
             x = CGFloat(roundf(Float(frameSize.width / 2 - titleSize.width / 2))) + titlePositionAdjustment.horizontal
@@ -139,7 +139,7 @@ open class RDVTabBarItem: UIControl {
             badgeSize = NSString(string: self.badgeValue).boundingRect(with: CGSize(width: frameSize.width,
                                                                                     height: CGFloat(20)),
                                                                        options: .usesLineFragmentOrigin,
-                                                                       attributes: [NSFontAttributeName: badgeTextFont],
+                                                                       attributes: [NSAttributedStringKey.font: badgeTextFont],
                                                                        context: nil).size
             let textOffset = CGFloat(2.0)
 
@@ -163,10 +163,10 @@ open class RDVTabBarItem: UIControl {
             badgeTextStyle.lineBreakMode = .byWordWrapping
             badgeTextStyle.alignment = NSTextAlignment.center
 
-            let badgeTextAttributes: [String : Any] = [
-                NSFontAttributeName: badgeTextFont,
-                NSForegroundColorAttributeName: badgeTextColor,
-                NSParagraphStyleAttributeName: badgeTextStyle
+            let badgeTextAttributes: [NSAttributedStringKey : Any] = [
+                NSAttributedStringKey.font: badgeTextFont,
+                NSAttributedStringKey.foregroundColor: badgeTextColor,
+                NSAttributedStringKey.paragraphStyle: badgeTextStyle
             ]
 
             let rect = CGRect(x: badgeBackgroundFrame.minX + textOffset,

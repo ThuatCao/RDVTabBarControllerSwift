@@ -1,0 +1,10 @@
+framework module RDVTabBarControllerSwift {
+  umbrella header "RDVTabBarControllerSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RDVTabBarControllerSwift.__Swift {
+    exclude header "RDVTabBarControllerSwift-Swift.h"
+}
